@@ -620,6 +620,13 @@ def address_to_script_pubkey(s):
         elif len(s) == 62:
             # p2wskh
             return P2WSHScriptPubKey(decode_bech32(s)[2])
+    elif s[:6] == "bcrt1q":
+        if len(s) == 44:
+            # p2wpkh
+            return P2WPKHScriptPubKey(decode_bech32(s)[2])
+        elif len(s) == 64:
+            # p2wsh
+            return P2WSHScriptPubKey(decode_bech32(s)[2])
     elif s[:4] in ("bc1p", "tb1p"):
         if len(s) != 62:
             raise RuntimeError(f"unknown type of address: {s}")

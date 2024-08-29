@@ -227,6 +227,16 @@ class AddressToScriptPubKey(TestCase):
             ),
             (
                 P2WSHScriptPubKey,
+                "bcrt1qy0jn7qnt6tkmqq0yfhf00vr8yv4vf4y2232ppycaz29z7wjr23zq5m3kls",
+                "regtest",
+            ),
+            (
+                P2WPKHScriptPubKey,
+                "bcrt1qp58z6zvu64v8ntd3hpjl6eag40fjel0zkdfajs",
+                "regtest",
+            ),
+            (
+                P2WSHScriptPubKey,
                 "bc1qwqdg6squsna38e46795at95yu9atm8azzmyvckulcc7kytlcckxswvvzej",
                 "mainnet",
             ),
